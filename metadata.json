@@ -1,0 +1,6 @@
+{
+  "name": "Niyaan Source",
+  "description": "The Unified Vendor Assessment Portal. Suppliers perform self-assessments to get rated, while buyers source with confidence via verified profiles and AI-powered risk ratings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
