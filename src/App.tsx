@@ -76,7 +76,7 @@ export default function App() {
   const [authRole, setAuthRole] = useState<Role>("SUPPLIER");
   const [authCompanyName, setAuthCompanyName] = useState<string>("");
   const [authCategory, setAuthCategory] = useState<string>("Electronic Components");
-  const [authLocation, setAuthLocation] = useState<string>("USA");
+  const [authLocation, setAuthLocation] = useState<string>("");
   const [authError, setAuthError] = useState<string>("");
 
   // Sourcing Directory State
@@ -855,7 +855,7 @@ export default function App() {
                           )}
                         </div>
                         <p className="text-brand-slate text-xs mt-1 font-sans font-medium flex items-center gap-2">
-                          <Globe className="h-3.5 w-3.5 text-brand-gold" /> Location: {profileUser.location || "USA"} • Category: {profileUser.category || "Supplier"}
+                          <Globe className="h-3.5 w-3.5 text-brand-gold" /> Location: {profileUser.location || "New Delhi"} • Category: {profileUser.category || "Supplier"}
                         </p>
                       </div>
                     </div>
@@ -1054,7 +1054,7 @@ export default function App() {
                   </span>
                   <input 
                     type="text" 
-                    placeholder="Search by Company, Location, or Component (e.g., 'Taiwan', 'Silicon', 'Alloys')..." 
+                    placeholder="Search by Company, Location, or Component (e.g., 'Mumbai', 'Silicon', 'Alloys')..." 
                     className="w-full pl-10 pr-4 py-3 bg-[#F8FAFC] border border-slate-200/80 rounded-xl text-xs font-sans font-medium focus:outline-none focus:ring-1 focus:ring-brand-gold focus:border-brand-gold transition-all" 
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
@@ -1250,7 +1250,7 @@ export default function App() {
                     onClick={() => handleRoleImpersonate("vendor_1")} 
                     className="flex-1 bg-brand-navy text-white hover:bg-brand-navy/95 text-[11px] font-display font-bold tracking-wider uppercase px-4 py-3 rounded-xl transition-all duration-200 shadow-sm text-left hover:scale-[1.02]"
                   >
-                    Impersonate Apex Semiconductor Corp <span className="text-brand-gold font-sans font-bold block mt-0.5 text-[9px] uppercase tracking-normal">Verified Gold Seller</span>
+                    Impersonate Vishwamitra Semiconductors Ltd <span className="text-brand-gold font-sans font-bold block mt-0.5 text-[9px] uppercase tracking-normal">Verified Gold Seller</span>
                   </button>
                   <button 
                     onClick={() => handleRoleImpersonate("vendor_3")} 
@@ -1682,7 +1682,7 @@ export default function App() {
                     onClick={() => handleRoleImpersonate("buyer_1")} 
                     className="bg-brand-navy text-white hover:bg-brand-navy/95 text-xs font-display font-bold uppercase tracking-wider px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer shadow-sm"
                   >
-                    Impersonate Sarah Chen (Head of Procurement)
+                    Impersonate Priya Sharma (Head of Procurement)
                   </button>
                 </div>
               </div>
@@ -1693,7 +1693,7 @@ export default function App() {
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 pb-6 border-b border-slate-100">
                   <div className="space-y-1">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 text-brand-navy text-[9px] font-display font-bold tracking-wider uppercase">
-                      Sarah Chen • Lead Procurement Officer
+                      Priya Sharma • Lead Procurement Officer
                     </span>
                     <h1 className="text-3xl font-display font-bold text-brand-navy tracking-tight">Buyer Procurement Workspace</h1>
                     <p className="text-xs text-brand-slate font-sans font-medium">Evaluate prospective suppliers, assign audit requests, and measure key material threats coefficients.</p>
@@ -1761,7 +1761,7 @@ export default function App() {
                     <div className="space-y-2 pt-2 text-xs">
                       <h4 className="font-display font-bold text-brand-gold text-[9px] uppercase tracking-wider">Dispatched Reminders Log ({simulatedInvites.length + 1})</h4>
                       <div className="max-h-24 overflow-y-auto space-y-1 font-mono text-[10px] text-slate-300 leading-snug">
-                        <p className="text-emerald-400">✓ SENT @ 10:04 AM: Invitation to apex@apex-semiconductor.com - Status: VERIFIED GOLD</p>
+                        <p className="text-emerald-400">✓ SENT @ 10:04 AM: Invitation to contact@vishwamitra-india.com - Status: VERIFIED GOLD</p>
                         {simulatedInvites.map((inv, idx) => (
                           <p key={idx} className="text-[#D9AA52]">✓ DISPATCHED @ {inv.sentAt}: Verification request to {inv.company} ({inv.email}) - Status: DELIVERED</p>
                         ))}
@@ -1822,7 +1822,7 @@ export default function App() {
                       </p>
                       <div className="p-3 bg-[#FCFCFD] rounded-xl text-xs border border-slate-100 flex items-center gap-2 text-brand-navy">
                         <AlertCircle className="h-4 w-4 text-[#a3792e] shrink-0" />
-                        <span className="text-[11px] font-sans font-semibold">Suggestion: Pivot target alloys inputs to Nordic verified smelting streams.</span>
+                        <span className="text-[11px] font-sans font-semibold">Suggestion: Pivot target alloys inputs to Bharat verified smelting streams.</span>
                       </div>
                     </div>
                     <span className="text-[9px] text-brand-slate block pt-4 font-mono font-semibold">Calculated across 8 chapters dimensions.</span>
@@ -2220,7 +2220,7 @@ export default function App() {
                   <input 
                     type="email" 
                     required
-                    placeholder="e.g. contact@apex-semiconductor.com"
+                    placeholder="e.g. contact@vishwamitra-india.com"
                     className="w-full bg-[#F8FAFC] border border-slate-200/80 rounded-xl px-4 py-3 text-xs focus:ring-1 focus:ring-brand-gold focus:border-brand-gold focus:outline-none transition-all"
                     value={authEmail}
                     onChange={(e) => setAuthEmail(e.target.value)}
@@ -2232,7 +2232,7 @@ export default function App() {
                   <input 
                     type="text" 
                     required
-                    placeholder="e.g. Alexander Sterling"
+                    placeholder="e.g. Vikram Patel"
                     className="w-full bg-[#F8FAFC] border border-slate-200/80 rounded-xl px-4 py-3 text-xs focus:ring-1 focus:ring-brand-gold focus:border-brand-gold focus:outline-none transition-all"
                     value={authName}
                     onChange={(e) => setAuthName(e.target.value)}
@@ -2246,7 +2246,7 @@ export default function App() {
                       <input 
                         type="text" 
                         required
-                        placeholder="e.g. Apex Semiconductor Corp"
+                        placeholder="e.g. Vishwamitra Semiconductors Ltd"
                         className="w-full bg-[#F8FAFC] border border-slate-200/80 rounded-xl px-4 py-3 text-xs focus:ring-1 focus:ring-brand-gold focus:border-brand-gold focus:outline-none transition-all"
                         value={authCompanyName}
                         onChange={(e) => setAuthCompanyName(e.target.value)}
@@ -2273,7 +2273,7 @@ export default function App() {
                         <input 
                           type="text" 
                           required
-                          placeholder="e.g. Taiwan, Germany..."
+                          placeholder="e.g. Mumbai, Bangalore..."
                           className="w-full bg-[#F8FAFC] border border-slate-200/80 rounded-xl px-4 py-3 text-xs focus:ring-1 focus:ring-brand-gold focus:border-brand-gold focus:outline-none transition-all"
                           value={authLocation}
                           onChange={(e) => setAuthLocation(e.target.value)}
