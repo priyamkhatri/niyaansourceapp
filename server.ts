@@ -1,3 +1,4 @@
+// ssh -i niyaan-source-app_key.pem azureuser@20.198.10.204
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
